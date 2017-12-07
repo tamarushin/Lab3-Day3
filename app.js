@@ -41,31 +41,41 @@ if (mars === 'n'){
 }
 //Fifth Question
 var blackHole = prompt('Did Tama go to highschool in a black hole in the middle of the universe?\n(Please answer "y" for Yes and "n" for No)');
-console.log('blackHole:', blackHole)
+console.log('blackHole:', blackHole);
 if (blackHole === 'y'){
   alert ('Correctamundo! It was called Hello!Hello!Hello!Hello!, like an echo');
 }
 if (blackHole === 'n'){
-  alert ('That is the wrong answer')
+  alert ('That is the wrong answer');
 }
 // sixth question while loop
 var moonDust;
-var counter = 1;
+//we changed counter from 1 to 0 to give us 4 tries instead of 3
+var counter = 0;
+console.log('counter variable', counter);
 console.log('Pounds of Moondust:', moonDust);
 
 while (moonDust !== 32){
   moonDust = parseInt(prompt('How many pounds of moonDust does Tama have?\n(Please enter a number)'));
   console.log('Pounds of moonDust:', moonDust);
-}if (number < 32){
+
+  //we changed number to moonDust below. we added a break here.
+  if (moonDust === 32) {
+    alert ('Awesome!!');
+    break;
+  } else if (moonDust < 32) {
     alert ('Incorrect! Too Low!');
     counter++;
-  } else if (number > 32){
+  } else if (moonDust > 32) {
     alert ('Bummer! Too high');
-    counter++
-  } else if (is NaN (moonDust) || moonDust === null){
-    alert ('That is not a number')
-    counter++
+    counter++; //we reworded NaN
+  } else if (moonDust === NaN || moonDust === null){
+    alert ('That is not a number');
+    counter++;
   }
-//     correctcounters++;{
-// alert('you got ' +   correctcounters + ' out of 7');
-// }
+  //we put counter === 4 to show only 4 tries were needed. Also put in the break
+  if (counter === 4) {
+    alert('Time\'s up, you\'ve gueessed 4 times!');
+    break;
+  }
+}
