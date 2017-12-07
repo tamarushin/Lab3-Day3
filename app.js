@@ -48,3 +48,24 @@ if (blackHole === 'y'){
 if (blackHole === 'n'){
   alert ('That is the wrong answer')
 }
+// sixth question while loop
+var moonDust;
+var counter = 1;
+console.log('Pounds of Moondust:', moonDust);
+
+while (moonDust !== 32){
+  moonDust = parseInt(prompt('How many pounds of moonDust does Tama have?\n(Please enter a number)'));
+  console.log('Pounds of moonDust:', moonDust);
+}if (number < 32){
+    alert ('Incorrect! Too Low!');
+    counter++;
+  } else if (number > 32){
+    alert ('Bummer! Too high');
+    counter++
+  } else if (is NaN (moonDust) || moonDust === null){
+    alert ('That is not a number')
+    counter++
+  }
+//     correctcounters++;{
+// alert('you got ' +   correctcounters + ' out of 7');
+// }
